@@ -28,10 +28,10 @@
   <link rel="mask-icon" sizes="any" href="{% absolute_asset_url "sentry" "images/icons/sentry-glyph-black.svg" %}" color="#FB4226">
 
   {% block css %}
-  <link href="{% asset_url "sentry" "dist/sentry.css" %}" rel="stylesheet"/>
+  <link href="{% asset_url "sentry" "dist/sentry.css?1" %}" rel="stylesheet"/>
   {% endblock %}
 
-  <title>{% block title %}Sentry{% endblock %}</title>
+  <title>{% block title %}Incore{% endblock %}</title>
 
   <script>
   window.csrfCookieName = '{{ CSRF_COOKIE_NAME }}';
@@ -218,13 +218,8 @@
         {% block footer %}
         <div class="pull-right">
           {% block support_link %}{% endblock %}
-          <a href="https://docs.sentry.io/hosted/api/">{% trans "API" %}</a>
-          <a href="https://docs.sentry.io">{% trans "Docs" %}</a>
-          <a href="https://github.com/getsentry/sentry" rel="noreferrer">{% trans "Contribute" %}</a>
-          {% if ONPREMISE %}<a href="/out/">{% trans "Migrate to SaaS" %}</a>{% endif %}
+          <a href="https://incore.com/">INCORE</a>
         </div>
-        {% if ONPREMISE %}<div class="version pull-left">Sentry {{ sentry_version.current }} {% if sentry_version.update_available %}<a href="#" title="You're running an old version of Sentry, did you know {{ sentry_version.latest }} is available?" class="tip icon-circle-arrow-up">&nbsp;</a>{% endif %}</div>{% endif %}
-        <a href="/" class="icon-sentry-logo"></a>
         {% endblock %}
       </div>
     </footer>

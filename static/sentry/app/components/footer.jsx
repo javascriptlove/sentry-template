@@ -39,7 +39,7 @@ const Footer = React.createClass({
               {'Sentry '}
               <DynamicWrapper fixed="Acceptance Test" value={config.version.current} />
             </div>}
-          <a href="/" className="icon-sentry-logo" />
+         
           {this.state.hooks}
         </div>
       </footer>
